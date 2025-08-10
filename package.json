@@ -1,0 +1,33 @@
+{
+  "name": "namaste-react-practice",
+  "version": "1.0.0",
+  "description": "namaste react",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aditi792/namaste-react-practice.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "aditi mondal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aditi792/namaste-react-practice/issues"
+  },
+  "homepage": "https://github.com/Aditi792/namaste-react-practice#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.0"
+  },
+  "browserList": [
+    "last 2 versions",
+    "last 2 chrome versions"
+  ]
+}

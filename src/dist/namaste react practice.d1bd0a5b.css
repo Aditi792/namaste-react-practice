@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  background: #ff4500;
+  border-radius: 15px;
+  height: 50px;
+  padding: 5px;
+}
+
+.nav-bar {
+  background: #f0f0f0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.nav-items {
+  gap: 30px;
+  list-style: none;
+  display: flex;
+}
+
+.nav-items li {
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.search-container, .restaurant-list {
+  align-items: center;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.search-container input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  padding: 10px;
+}
+
+.search-container button, .btn {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.search-container button:hover, .btn:hover {
+  background: #eed0d0;
+}
+
+.btn {
+  margin-left: 8px;
+}
+
+.restaurant-list, .shimmer-container {
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.restaurant-card, .shimmer-card {
+  background: #f3efef;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 240px;
+  height: 450px;
+  padding: 10px;
+}
+
+.res-card-img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 220px;
+  height: 225px;
+}
+/*# sourceMappingURL=namaste react practice.d1bd0a5b.css.map */
