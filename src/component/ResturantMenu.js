@@ -1,23 +1,13 @@
-import { REST_MENU_API } from "../utils/constant";
-import { useEffect,useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router";
+import useResturantMenu from "../utils/useResturantMenu"
 
 const ResturantMenu=()=>{
 
-    const [restInfo,setRestInfo]=useState(null);
     const {restId} = useParams();
+    const restInfo = useResturantMenu(restId);//custom hook
     
-    useEffect(()=>{
-        fetchRestApi();
-    },[])
     
-    const fetchRestApi = async()=>{
-        const restData = await fetch(REST_MENU_API+restId);
-        const json = await restData.json();
-        setRestInfo(json.data);
-    };
-
     if(restInfo == null)return<Shimmer/>;
 
     const {name,cuisines,totalRatingsString,avgRatingString} = restInfo?.cards[2]?.card?.card?.info;

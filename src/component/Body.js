@@ -2,6 +2,7 @@ import {useEffect, useState } from "react";
 import RestaurantList from "./RestaurantList";
 import Shimmer from "./Shimmer";
 import { API_URL } from "../utils/constant";
+import checkOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [resList, setResList] = useState([]);
@@ -20,6 +21,17 @@ const Body = () => {
     setFilteredRest(fetchedRestaurants || []);
     //console.log(fetchedRestaurants);
   }
+
+
+  const onlineStatus = checkOnlineStatus();//custom hook
+
+  if(!onlineStatus){
+    return(
+    <h1>
+      Sorry ! Something is wrong . Check yout internet connection.
+    </h1>)
+  } 
+
 
   if(!resList.length) {
     return <Shimmer />;
