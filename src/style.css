@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .logo{
     height: 50px;
@@ -45,7 +41,7 @@
     width: 300px;
 }
 .search-container button , .btn{
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-left: 10px;

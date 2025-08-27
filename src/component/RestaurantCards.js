@@ -1,7 +1,8 @@
 import { CDN_URL } from "../utils/constant";
 import {Link} from "react-router";
+import useContext from "../utils/UserContext";
 
-const RestaurantList = (props) => {
+const RestaurantCard = (props) => {
   const {
     id,
     name,
@@ -28,4 +29,4 @@ const RestaurantList = (props) => {
   );
 };
 
-export default RestaurantList;
+export default RestaurantCard;
