@@ -5,9 +5,12 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import Header from "./component/Header";
 import Body from "./component/Body"; 
+import Cart from "./component/Cart"
 import ResturantMenu from "./component/ResturantMenu"
 import Error from "./component/Error";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 //import Grocery from "./component/Grocery";
 
 import "./index.css";
@@ -25,12 +28,14 @@ function App() {
     
   
     return(
+        <Provider store={appStore}>
         <UserContext.Provider value={{loggedInUser:userName ,setUserName}}>
         <>
         <Header/>
         <Outlet/>
         </>
         </UserContext.Provider>
+        </Provider>
     );
 }
 
@@ -67,6 +72,10 @@ const reactRouter = createBrowserRouter([
                     </Suspense>
 
                 },
+                {
+                    path:"/cart",
+                    element: <Cart/>
+                }
             ],
             errorElement: <Error />
         },

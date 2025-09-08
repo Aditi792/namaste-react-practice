@@ -3,12 +3,16 @@ import { CDN_URL, logo } from "../utils/constant";
 import {Link} from"react-router";
 import checkOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header=()=>{
 
     const [btnLogin, setBtnLogin] = useState("Login");
     const onlineStatus = checkOnlineStatus();
     const {loggedInUser}=useContext(UserContext);
+
+    const cartItems = useSelector((store)=>store.cart.items);
+    //console.log(cartItems)
 
     return(
         <nav className="nav-bar">
@@ -20,7 +24,7 @@ const Header=()=>{
                 <li><Link to="/grocery">Grocery</Link></li>
                 <li><Link to="/about">About us</Link></li>
                 <li><Link to="/contact">Contact us</Link></li>
-                <li>Cart</li>
+                <li><Link to="/cart">Cart ({cartItems.length} items)</Link></li>
                 <button className="btn" onClick={
                     () => {
                         setBtnLogin(btnLogin === "Login" ? "Logout" : "Login");
